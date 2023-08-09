@@ -140,6 +140,7 @@
 				justify-content: space-between;
 				align-items: center;
 			}
+
 			.mobileHeader {
 				padding: 15px 0px !important;
 			}
@@ -151,6 +152,7 @@
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
+				padding: 0px 10px;
 			}
 
 			.mobileHeader {
@@ -170,8 +172,11 @@
 				padding-left: 0px !important;
 				padding-right: 0px !important;
 				display: flex !important;
+				gap: 4px;
+				justify-content: flex-end;
 			}
-			.padd2{
+
+			.padd2 {
 				font-size: 16px !important;
 			}
 
@@ -179,8 +184,25 @@
 				width: unset;
 				height: unset;
 			}
-			.hideMobile{
+
+			.hideMobile {
 				display: none;
+			}
+
+			.displayGrid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.positionImage {
+				padding-top: 25px;
+			}
+
+			img.fullWidth {
+				padding: 0px 10px;
+			}
+			td.pad img {
+				padding: 0px 10px;
 			}
 		}
 	</style>
@@ -284,7 +306,7 @@
 															width="100%">
 															<tr>
 																<td class="pad padd"
-																	style="padding-left:20px;padding-right:20px;text-align: right; padding-bottom: 10px;">
+																	style="padding-left:20px;text-align: right; padding-bottom: 10px;">
 																	<button class="Btn"><a href="#">繁</a></button>
 																	<button class="Btn"><a href="#">简</a></button>
 																	<button class="Btn" style="padding-top: 5px;"><a
@@ -299,8 +321,7 @@
 															style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
 															width="100%">
 															<tr>
-																<td class="pad"
-																	style="padding-right:5px;">
+																<td class="pad" style="padding-right:5px;">
 																	<div style="font-family: Arial, sans-serif">
 																		<div class=""
 																			style="font-size: 12px; font-family: 'Roboto Slab', Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #1d1c1d; line-height: 1.2;">
@@ -414,7 +435,7 @@
 																		style="font-size: 12px; font-family: 'Roboto Slab', Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #1d1c1d; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
-																			<span style="font-size:20px;"><strong>HKBU
+																			<span style="font-size:16px;"><strong>HKBU
 																					receives support from NVIDIA for two
 																					research projects</strong></span>
 																		</p>
@@ -473,7 +494,7 @@
 																		style="font-size: 12px; font-family: 'Roboto Slab', Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #1d1c1d; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
-																			<span style="font-size:20px;"><strong>Bank
+																			<span style="font-size:16px;"><strong>Bank
 																					of China (Hong Kong) supports HKBU
 																					scholarships and bursaries for 25
 																					consecutive years</strong></span>
@@ -536,7 +557,7 @@
 																		style="font-size: 12px; font-family: 'Roboto Slab', Arial, 'Helvetica Neue', Helvetica, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #1d1c1d; line-height: 1.2;">
 																		<p
 																			style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;">
-																			<span style="font-size:20px;"><strong>HKBU
+																			<span style="font-size:16px;"><strong>HKBU
 																					receives further donation from The
 																					Hong Kong Children’s Choir for
 																					scholarship</strong></span>
@@ -1527,7 +1548,7 @@
 										style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000; background-size: auto; width: 680px; margin: 0 auto;"
 										width="680">
 										<tbody>
-											<tr>
+											<tr class="displayGrid">
 												<td class="column column-1"
 													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left; font-weight: 400; background-color: #f8e7f7; padding-bottom: 0px; padding-top: 0px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
 													width="75%">
@@ -1542,15 +1563,15 @@
 																		style="font-size: 12px; font-family: 'Roboto', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 21.6px; color: #9c3131; line-height: 1.8;">
 																		<p
 																			style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 39.6px; letter-spacing: normal;">
-																			<span style="font-size:22px;"><strong>CLICK
+																			<span style="font-size:16px;"><strong>CLICK
 																					HERE </strong></span>
 																		</p>
 																		<p
 																			style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 39.6px; letter-spacing: normal;">
-																			<span style="font-size:22px;"><strong>to
+																			<span style="font-size:16px;"><strong>to
 																					make a difference
 																				</strong></span><strong
-																				style="font-size:22px;">by supporting
+																				style="font-size:16px;">by supporting
 																				HKBU!</strong>
 																		</p>
 																	</div>
@@ -1560,18 +1581,18 @@
 													</table>
 												</td>
 												<td class="column column-2"
-													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left; font-weight: 400; padding-bottom: 0px; padding-top: 0px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
+													style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left; font-weight: 400; padding-bottom: 0px; padding-top: 0px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;background-color: #00469B;"
 													width="25%">
 													<table border="0" cellpadding="0" cellspacing="0"
 														class="image_block block-1" role="presentation"
 														style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
 														width="100%">
 														<tr>
-															<td class="pad"
+															<td class="pad positionImage"
 																style="width:100%;padding-right:0px;padding-left:0px;">
 																<div align="center" class="alignment"
-																	style="line-height:10px"><img alt="I'm an image"
-																		src="images/23.jpg"
+																	style="line-height:10px; background-color: #00469B;">
+																	<img alt="I'm an image" src="images/23.jpg"
 																		style="height: auto; display: block; border: 0; max-width: 170px; width: 100%;"
 																		title="I'm an image" width="170" /></div>
 															</td>
