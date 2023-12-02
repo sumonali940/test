@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+	<style type="text/css">
+		body {
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		}
+
+		iframe {
+		  width: 100vw;
+		  height: 100vh;
+		  border: none;
+		}
+
+		body iframe#customIframe .main-header {
+		  display: none !important;
+		}
+
+		.main-header {
+		  display: none;
+		}
+	  </style>
+  </head>
+<body>
+
+<h1>My Web Page</h1>
+
+<p>Hello everybody!</p>
+
+<p>Translate this page:</p>
+
+<div id="google_translate_element"></div>
+
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<p>You can translate the content of this page by selecting a language in the select box.</p>
+
+
+<br/></br/>
+
+<iframe id="localize_iframe" src="https://www.ecowitt.net/home/share?authorize=65B0GN&device_id=blROS2xxcVRlSTZEZ2V5Yzk4ejY2QT09"></iframe>
+
+
+</body>
+</html>
