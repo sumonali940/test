@@ -171,39 +171,40 @@
       <div class="cup cup-small"><span class="label">250ml</span></div>
     </div>
     <script>
-      const smallCups = document.querySelectorAll(".cup-small");
-      const bigCupFill = document.getElementById("bigCupFill");
-      const initialFill = document.getElementById("initialFill");
-      const totalLiters = 1.5; // Adjusted total liters capacity to 1.5
+		const smallCups = document.querySelectorAll(".cup-small");
+		const bigCupFill = document.getElementById("bigCupFill");
+		const initialFill = document.getElementById("initialFill");
+		const totalLiters = 1.5; // Adjusted total liters capacity to 1.5
 
-      document.querySelectorAll(".header-list li").forEach(item => {
-        item.addEventListener('click', () => setFillLevel(item.getAttribute('data-fill')));
-      });
+		document.querySelectorAll(".header-list li").forEach(item => {
+		  item.addEventListener('click', () => setFillLevel(item.getAttribute('data-fill')));
+		});
 
-      function setFillLevel(fillLevel) {
-        const fillAmount = parseFloat(fillLevel); // Convert string to float
-        let cupsToFill = Math.max(Math.floor(fillAmount * totalLiters), 0); // Adjusted calculation based on 1.5 cups total
-        let halfCup = fillAmount % 1 !== 0;
+		function setFillLevel(fillLevel) {
+		  const fillAmount = parseFloat(fillLevel); // Convert string to float
+		  let cupsToFill = Math.max(Math.floor(fillAmount * totalLiters), 0); // Adjusted calculation based on 1.5 cups total
+		  let remainingVolume = (fillAmount * totalLiters) - cupsToFill; // Adjusted calculation for remaining volume
 
-        smallCups.forEach((cup, idx) => {
-          cup.classList.remove("full", "half"); // Reset cup status
-          if (idx < cupsToFill) {
-            cup.classList.add("full"); // Full cups
-          } else if (halfCup && idx === cupsToFill) {
-            cup.classList.add("half"); // Half cup
-            halfCup = false; // Only one half cup should be added
-          }
-        });
+		  smallCups.forEach((cup, idx) => {
+			cup.classList.remove("full", "half"); // Reset cup status
+			if (idx < cupsToFill) {
+			  cup.classList.add("full"); // Full cups
+			} else if (remainingVolume > 0 && idx === cupsToFill) {
+			  cup.classList.add("half"); // Half cup
+			  remainingVolume -= 0.5; // Deduct 0.5 from remaining volume
+			}
+		  });
 
-        updateBigCup(cupsToFill + (halfCup ? 0.5 : 0));
-      }
+		  updateBigCup(cupsToFill + (remainingVolume > 0 ? 0.5 : 0)); // Update big cup with remaining volume
+		}
 
-      function updateBigCup(filledAmount) {
-        const percentageFilled = (filledAmount / (totalLiters * 2)) * 100; // Adjusted for 1.5 cups total
-        const fillHeight = (percentageFilled / 100) * (330 - initialFill.offsetHeight); // Adjust height calculation
-        bigCupFill.style.height = `${fillHeight}px`; // Apply calculated height
-        bigCupFill.style.bottom = `${initialFill.offsetHeight}px`; // Ensure blue fill starts above the grey fill
-      }
+		function updateBigCup(filledAmount) {
+		  const percentageFilled = (filledAmount / (totalLiters * 2)) * 100; // Adjusted for 1.5 cups total
+		  const fillHeight = (percentageFilled / 100) * (330 - initialFill.offsetHeight); // Adjust height calculation
+		  bigCupFill.style.height = `${fillHeight}px`; // Apply calculated height
+		  bigCupFill.style.bottom = `${initialFill.offsetHeight}px`; // Ensure blue fill starts above the grey fill
+		}
+
     </script>
   </body>
 </html>
